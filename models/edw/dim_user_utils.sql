@@ -8,7 +8,7 @@ select
     {{ dbt_utils.generate_surrogate_key(['EMPLOYEE_ID']) }} as sk,
     EMPLOYEE_ID ,
 	EMPLOYEE_NAME ,
-	{{cc_percentage_calc('DEPARTMENT_ID') }} ,
+	{{cc_percentage_calc('DEPARTMENT_ID') }}  as dpid,
 	EMAIL ,
     PHONE ,
     ADDRESS ,
