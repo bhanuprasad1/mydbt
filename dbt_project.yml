@@ -2,7 +2,11 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
+<<<<<<< HEAD
 name: 'mydbt'
+=======
+name: 'my_new_project'
+>>>>>>> 7ae0daf65254079b47f39d74f4266b77d2d2c413
 version: '1.0.0'
 config-version: 2
 
@@ -31,6 +35,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/ directory
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
+<<<<<<< HEAD
 
 models:
   mydbt:
@@ -99,3 +104,10 @@ snapshots:
     {%- elif target.name == "prd" -%} dbt_prd
     {%- else -%} invalid_target_name_please_check
     {%- endif -%}
+=======
+models:
+  my_new_project:
+    # Applies to all files under models/example/
+    example:
+      materialized: view
+>>>>>>> 7ae0daf65254079b47f39d74f4266b77d2d2c413
